@@ -116,15 +116,34 @@
     .brand { overflow-y: auto; scrollbar-width: none; }
     .main { overflow-y: auto; }
   }
+  /* Tablet and phone: compact dark header, form as a rounded sheet over it. */
   @media (max-width: 980px) {
-    .shell { grid-template-columns: 1fr; }
-    .brand { padding: 28px 20px 32px; }
-    .invite { margin-top: 28px; }
-    .brand h1 { font-size: 30px; }
-    .steps, .brand footer { display: none; }
-    .main { padding: 32px 16px 48px; }
+    .shell { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
+    .brand { padding: 20px 20px 48px; }
+    .invite { margin-top: 22px; font-size: 11px; padding: 5px 12px; }
+    .brand h1 { font-size: 28px; margin-top: 14px; }
+    .brand p.lede { font-size: 14.5px; margin-top: 10px; }
+    .summary, .steps, .brand footer { display: none; }
+    .main { position: relative; margin-top: -24px; border-radius: 24px 24px 0 0; background: #fff; padding: 28px 20px 40px;
+            box-shadow: 0 -12px 30px -18px rgba(11,18,32,.5); }
+    .main h2 { font-size: 21px; }
+    .main .intro { font-size: 13.5px; }
+    fieldset { margin-top: 24px; }
+    input, textarea { font-size: 16px; }
   }
-  @media (max-width: 600px) { .grid, .plans { grid-template-columns: 1fr; } }
+  @media (max-width: 600px) {
+    .grid { grid-template-columns: 1fr; gap: 14px; }
+    .grid.pair { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .lg-only { display: none; }
+    .plans { grid-template-columns: 1fr; gap: 10px; }
+    .plan { display: grid; grid-template-columns: auto 1fr auto; align-items: center; column-gap: 12px; padding: 13px 14px; }
+    .plan .pn { display: contents; }
+    .plan .pn i { order: -1; grid-row: 1 / span 2; }
+    .plan .pn { font-size: 15px; }
+    .plan .pp { grid-column: 3; grid-row: 1 / span 2; margin: 0; font-size: 17px; text-align: right; }
+    .plan .pd { grid-column: 2; margin: 0; font-size: 12px; }
+    .plan .tag { top: -9px; right: 14px; }
+  }
 </style>
 </head>
 <body>
@@ -182,9 +201,9 @@
 
         <fieldset>
           <legend>Your practice</legend>
-          <div class="grid">
-            <label class="f">Team members who will sign in<input name="team_size" type="number" required min="1" max="500" placeholder="5"></label>
-            <label class="f">Client companies you manage<input name="client_count" type="number" required min="1" max="100000" placeholder="30"></label>
+          <div class="grid pair">
+            <label class="f"><span>Team members<span class="lg-only"> who will sign in</span></span><input name="team_size" type="number" required min="1" max="500" placeholder="5"></label>
+            <label class="f"><span>Client companies<span class="lg-only"> you manage</span></span><input name="client_count" type="number" required min="1" max="100000" placeholder="30"></label>
             <label class="f full"><span>Anything we should know? <span class="opt">(optional)</span></span><textarea name="message" maxlength="2000" placeholder="Monthly document volume, Tally version, best time to call…"></textarea></label>
           </div>
         </fieldset>
