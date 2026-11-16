@@ -224,9 +224,9 @@
 (function () {
   var API = "https://api.simplyledgers.com/api/v1/public/signup-requests";
   var PLANS = {
-    Starter: { price: "1,499", desc: "500 documents a month", feats: ["500 documents a month", "Up to 10 client companies", "3 users"] },
-    Pro: { price: "4,999", desc: "2,500 documents a month", feats: ["2,500 documents a month", "Up to 40 client companies", "10 users"], tag: "Popular" },
-    Max: { price: "14,999", desc: "7,500 documents, own server", feats: ["7,500 documents a month", "Unlimited client companies", "25 users", "Dedicated server"] }
+    Starter: { price: "1,499", desc: "500 documents a month", feats: ["500 documents a month", "Up to 10 client companies", "1 user (Partner)"] },
+    Pro: { price: "4,999", desc: "2,500 documents a month", feats: ["2,500 documents a month", "Up to 40 client companies", "3 users incl. Partner"], tag: "Popular" },
+    Max: { price: "14,999", desc: "7,500 documents, own server", feats: ["7,500 documents a month", "Unlimited client companies", "10 users", "Dedicated server"] }
   };
   var form = document.getElementById("f");
   var clean = function (s) { return String(s).replace(/[<>&"]/g, ""); };
