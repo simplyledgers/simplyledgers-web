@@ -1,70 +1,278 @@
-<!DOCTYPE html>
-<html lang="en" data-tsd-source="/src/routes/__root.tsx:119:5"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" data-precedence="default"><link rel="stylesheet" href="styles.css" data-precedence="default"><title>Sign up · SimplyLedgers</title><meta name="description" content="Request a SimplyLedgers account for your CA firm. Pick a plan, pay directly, and get your team's workspace."><meta property="og:title" content="Sign up · SimplyLedgers"><meta property="og:description" content="Request a SimplyLedgers account for your CA firm. Pick a plan, pay directly, and get your team's workspace."><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Create your workspace · SimplyLedgers</title>
+<meta name="description" content="Private onboarding for SimplyLedgers clients.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* Private onboarding page shared with clients directly: self-contained, not part of the site's navigation. */
+  :root {
+    --blue: #035efc; --blue-d: #0241a8; --teal: #05a296; --ink: #0b1220; --text: #111827;
+    --body: #475569; --muted: #64748b; --line: #e2e8f0; --field: #cbd5e1; --tint: #f6f8fc; --soft: #eef4ff; --err: #dc2626;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif; color: var(--text); background: #fff; -webkit-font-smoothing: antialiased; }
+  .shell { display: grid; grid-template-columns: minmax(360px, 5fr) 7fr; min-height: 100vh; }
+  .shell > * { min-width: 0; }
+  .brand h1, .summary .row { overflow-wrap: anywhere; }
 
-<meta name="twitter:title" content="Sign up · SimplyLedgers"><meta name="twitter:description" content="Request a SimplyLedgers account for your CA firm. Pick a plan, pay directly, and get your team's workspace."><meta property="og:image" content="https://simplyledgers.com/og-image.png"><meta name="twitter:image" content="https://simplyledgers.com/og-image.png"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/favicon-192.png"><meta name="robots" content="noindex, nofollow">
-</head><body><!--$--><div class="min-h-screen bg-background"><header class="fixed inset-x-0 top-0 z-50 transition-all duration-300 border-b border-transparent bg-transparent"><div class="mx-auto grid h-[76px] max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-6 px-5 sm:px-8 lg:flex lg:justify-between"><a class="min-w-0 shrink-0" aria-label="SimplyLedgers home" href="index.html"><span class="inline-flex items-center gap-2.5"><svg viewBox="568 362 406 318" aria-hidden="true" class="w-auto shrink-0 h-7 sm:h-[30px]"><g transform="translate(0 1024) scale(0.1 -0.1)"><path class="fill-brand-blue" d="M7410 6550 c-183 -8 -265 -61 -358 -233 -22 -40 -61 -110 -87 -157 -26 -47 -70 -128 -97 -180 -27 -52 -53 -99 -57 -105 -5 -5 -35 -62 -68 -125 -33 -63 -116 -221 -183 -350 -68 -129 -188 -361 -267 -515 -587 -1148 -596 -1169 -520 -1284 67 -101 66 -101 567 -101 633 0 586 -30 840 530 66 144 146 314 318 670 43 91 104 217 134 280 31 63 72 149 91 190 32 69 213 438 408 835 43 88 102 205 131 260 75 143 71 227 -13 270 -33 17 -571 27 -839 15z"></path><path class="fill-brand-teal" d="M8697 6159 c-66 -15 -132 -56 -183 -112 -48 -52 -305 -552 -637 -1237 -52 -107 -154 -316 -226 -464 -72 -148 -131 -271 -131 -273 0 -2 -20 -45 -45 -95 -76 -155 -58 -259 55 -319 44 -23 868 -22 943 1 155 48 183 93 519 830 56 122 140 305 181 390 24 52 97 208 162 345 65 138 171 360 236 494 141 289 147 319 83 391 -21 23 -51 44 -72 50 -46 12 -831 12 -885 -1z"></path></g></svg><span class="text-[1.25rem] font-extrabold leading-none tracking-tight sm:text-[1.35rem] text-foreground">SimplyLedgers</span></span></a><nav aria-label="Main" class="hidden items-center gap-1 lg:flex"><a class="group relative rounded-md px-4 py-2 text-[0.92rem] font-semibold text-foreground/85 transition-colors hover:text-primary" href="platform.html">Platform<span class="absolute inset-x-4 -bottom-0.5 h-0.5 origin-left scale-x-0 rounded-full bg-primary transition-transform duration-300 group-hover:scale-x-100"></span></a><a class="group relative rounded-md px-4 py-2 text-[0.92rem] font-semibold text-foreground/85 transition-colors hover:text-primary" href="features.html">Features<span class="absolute inset-x-4 -bottom-0.5 h-0.5 origin-left scale-x-0 rounded-full bg-primary transition-transform duration-300 group-hover:scale-x-100"></span></a><a class="group relative rounded-md px-4 py-2 text-[0.92rem] font-semibold text-foreground/85 transition-colors hover:text-primary" href="integrations.html">Integrations<span class="absolute inset-x-4 -bottom-0.5 h-0.5 origin-left scale-x-0 rounded-full bg-primary transition-transform duration-300 group-hover:scale-x-100"></span></a><a class="group relative rounded-md px-4 py-2 text-[0.92rem] font-semibold text-foreground/85 transition-colors hover:text-primary" href="resources.html">Resources<span class="absolute inset-x-4 -bottom-0.5 h-0.5 origin-left scale-x-0 rounded-full bg-primary transition-transform duration-300 group-hover:scale-x-100"></span></a><a class="group relative rounded-md px-4 py-2 text-[0.92rem] font-semibold text-foreground/85 transition-colors hover:text-primary" href="about.html">About<span class="absolute inset-x-4 -bottom-0.5 h-0.5 origin-left scale-x-0 rounded-full bg-primary transition-transform duration-300 group-hover:scale-x-100"></span></a></nav><div class="hidden items-center gap-3 lg:flex"><a class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-primary/70 bg-background text-foreground font-semibold transition-all duration-300 hover:border-primary hover:bg-secondary hover:-translate-y-px py-2 h-11 rounded-lg px-5" href="pricing.html">Pricing</a><a class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground font-semibold shadow-button transition-all duration-300 hover:bg-primary-deep hover:-translate-y-px [&amp;_svg]:transition-transform hover:[&amp;_svg]:translate-x-0.5 py-2 h-11 rounded-lg px-5" href="book-demo.html">Book a Demo <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-9 w-9 shrink-0 lg:hidden" aria-label="Open menu" type="button" aria-haspopup="dialog" aria-expanded="false" data-state="closed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu size-5!" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button></div></header><main class="relative overflow-hidden bg-hero pt-[76px]"><div class="mx-auto grid max-w-7xl gap-14 px-5 pb-24 pt-12 sm:px-8 md:pt-16 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16"><div class="min-w-0 lg:pt-6"><div class="reveal is-visible" style="--reveal-delay:0ms"><span class="eyebrow"><span class="size-2 rounded-full bg-brand-teal"></span>Sign up</span></div><div class="reveal is-visible" style="--reveal-delay:80ms"><h1 class="mt-6 text-[2.3rem] font-extrabold leading-[1.08] text-foreground sm:text-5xl lg:text-[3rem]">Bring SimplyLedgers to <span class="text-primary">your firm</span></h1></div><div class="reveal is-visible" style="--reveal-delay:160ms"><p class="mt-6 max-w-xl text-[1.05rem] leading-relaxed text-muted-foreground">Send us your firm's details and the plan you want. We confirm everything with you, and once payment is in, your team's workspace is ready to use.</p></div><div class="reveal is-visible" style="--reveal-delay:220ms"><p class="mt-10 text-xs font-bold uppercase tracking-[0.08em] text-muted-foreground">How signing up works</p></div><ul class="mt-5 grid gap-4"><li class="reveal flex items-start gap-4 is-visible" style="--reveal-delay:260ms"><span class="grid size-10 shrink-0 place-items-center rounded-xl border border-border bg-background text-primary font-extrabold shadow-soft">1</span><div><p class="text-[0.95rem] font-bold text-foreground">Send this form</p><p class="mt-0.5 text-sm leading-relaxed text-muted-foreground">Tell us about your firm and pick a plan. It takes two minutes.</p></div></li><li class="reveal flex items-start gap-4 is-visible" style="--reveal-delay:330ms"><span class="grid size-10 shrink-0 place-items-center rounded-xl border border-border bg-background text-primary font-extrabold shadow-soft">2</span><div><p class="text-[0.95rem] font-bold text-foreground">We confirm with you</p><p class="mt-0.5 text-sm leading-relaxed text-muted-foreground">Our team calls to answer questions and sends an invoice for your plan.</p></div></li><li class="reveal flex items-start gap-4 is-visible" style="--reveal-delay:400ms"><span class="grid size-10 shrink-0 place-items-center rounded-xl border border-border bg-background text-primary font-extrabold shadow-soft">3</span><div><p class="text-[0.95rem] font-bold text-foreground">You pay directly</p><p class="mt-0.5 text-sm leading-relaxed text-muted-foreground">Pay by bank transfer or UPI. No card or online payment needed.</p></div></li><li class="reveal flex items-start gap-4 is-visible" style="--reveal-delay:470ms"><span class="grid size-10 shrink-0 place-items-center rounded-xl border border-border bg-background text-primary font-extrabold shadow-soft">4</span><div><p class="text-[0.95rem] font-bold text-foreground">Your login arrives</p><p class="mt-0.5 text-sm leading-relaxed text-muted-foreground">We set up your workspace and email your sign-in. Then connect Tally and start.</p></div></li></ul></div><div class="reveal min-w-0 is-visible" style="--reveal-delay:160ms"><div class="rounded-[24px] border border-border bg-background p-6 shadow-frame sm:p-9"><div class="mb-7"><h2 class="text-xl font-extrabold text-foreground sm:text-2xl">Request your account</h2><p class="mt-2 text-sm leading-relaxed text-muted-foreground">Fill in your firm's details. Fields marked optional can be left blank.</p></div><form data-signup-form novalidate class="grid gap-5 sm:grid-cols-2">
-<div class="space-y-2"><label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="su-firm_name">Firm name</label><input type="text" class="flex w-full border py-1 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm h-12 rounded-xl border-input bg-background px-4 text-[0.95rem] shadow-none transition-colors focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-primary/20" id="su-firm_name" name="firm_name" placeholder="Rao &amp; Associates" required autocomplete="organization" minlength="2" maxlength="200"></div>
-<div class="space-y-2"><label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="su-contact_name">Your name</label><input type="text" class="flex w-full border py-1 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm h-12 rounded-xl border-input bg-background px-4 text-[0.95rem] shadow-none transition-colors focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-primary/20" id="su-contact_name" name="contact_name" placeholder="Partner's full name" required autocomplete="name" minlength="2" maxlength="120"></div>
-<div class="space-y-2"><label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="su-email">Work email</label><input type="email" class="flex w-full border py-1 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm h-12 rounded-xl border-input bg-background px-4 text-[0.95rem] shadow-none transition-colors focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-primary/20" id="su-email" name="email" placeholder="name@yourfirm.com" required autocomplete="email" maxlength="254"><p class="text-xs text-muted-foreground">Your login will be created on this email.</p></div>
-<div class="space-y-2"><label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="su-phone">Phone number</label><input type="tel" class="flex w-full border py-1 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm h-12 rounded-xl border-input bg-background px-4 text-[0.95rem] shadow-none transition-colors focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-primary/20" id="su-phone" name="phone" placeholder="+91 98480 12345" required autocomplete="tel" pattern="\+?[0-9 ]{{10,15}}"></div>
-<div class="space-y-2"><label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="su-city">City</label><input type="text" class="flex w-full border py-1 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm h-12 rounded-xl border-input bg-background px-4 text-[0.95rem] shadow-none transition-colors focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-primary/20" id="su-city" name="city" placeholder="Hyderabad" required autocomplete="address-level2" minlength="2" maxlength="80"></div>
-<div class="space-y-2"><label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="su-gstin">Firm GSTIN <span class="text-muted-foreground">(optional)</span></label><input type="text" class="flex w-full border py-1 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm h-12 rounded-xl border-input bg-background px-4 text-[0.95rem] shadow-none transition-colors focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-primary/20" id="su-gstin" name="gstin" placeholder="36AAKCS4521M1Z8" maxlength="15" pattern="[0-9]{{2}}[A-Za-z0-9]{{13}}"></div>
-<div class="space-y-2 sm:col-span-2"><label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="su-plan">Plan</label><select id="su-plan" name="plan" required class="flex items-center justify-between whitespace-nowrap border py-2 ring-offset-background cursor-pointer focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&amp;&gt;span]:line-clamp-1 h-12 rounded-xl border-input bg-background px-4 text-[0.95rem] shadow-none transition-colors focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-primary/20 w-full data-[placeholder]:text-muted-foreground appearance-none bg-no-repeat"><option value="Starter">Starter (₹1,499/month · 3 users · 10 companies)</option><option value="Pro">Pro (₹4,999/month · 10 users · 40 companies)</option><option value="Max">Max (₹14,999/month · 25 users · dedicated server)</option></select><p class="text-xs text-muted-foreground">Prices exclude 18% GST. You can change plan before paying.</p></div>
-<div class="space-y-2"><label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="su-team_size">Team members who will log in</label><input type="number" class="flex w-full border py-1 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm h-12 rounded-xl border-input bg-background px-4 text-[0.95rem] shadow-none transition-colors focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-primary/20" id="su-team_size" name="team_size" placeholder="5" required min="1" max="500"></div>
-<div class="space-y-2"><label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="su-client_count">Client companies you manage</label><input type="number" class="flex w-full border py-1 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm h-12 rounded-xl border-input bg-background px-4 text-[0.95rem] shadow-none transition-colors focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-primary/20" id="su-client_count" name="client_count" placeholder="30" required min="1" max="100000"></div>
-<div class="space-y-2 sm:col-span-2"><label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="su-message">Anything we should know? <span class="text-muted-foreground">(optional)</span></label><textarea class="flex w-full border placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm min-h-28 rounded-xl border-input bg-background px-4 py-3 text-[0.95rem] shadow-none focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-primary/20" rows="3" id="su-message" name="message" maxlength="2000" placeholder="Monthly document volume, Tally version, preferred time to call…"></textarea></div>
-<div aria-hidden="true" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden"><label for="su-website">Website</label><input id="su-website" name="website" tabindex="-1" autocomplete="off"></div>
-<div class="flex flex-col gap-3 pt-1 sm:col-span-2"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground font-semibold shadow-button transition-all duration-300 hover:bg-primary-deep hover:-translate-y-px [&amp;_svg]:transition-transform hover:[&amp;_svg]:translate-x-0.5 h-[52px] rounded-lg px-6 text-base w-full" type="submit">Send signup request <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button><p class="text-center text-xs text-muted-foreground">No payment now. We call you to confirm the plan, then send an invoice.</p></div>
-</form></div></div></div></main><footer class="border-t border-border bg-surface"><div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-4 px-5 py-8 sm:flex-row sm:items-center sm:px-8"><span class="inline-flex items-center gap-2.5 scale-90 origin-left"><svg viewBox="568 362 406 318" aria-hidden="true" class="w-auto shrink-0 h-7 sm:h-[30px]"><g transform="translate(0 1024) scale(0.1 -0.1)"><path class="fill-brand-blue" d="M7410 6550 c-183 -8 -265 -61 -358 -233 -22 -40 -61 -110 -87 -157 -26 -47 -70 -128 -97 -180 -27 -52 -53 -99 -57 -105 -5 -5 -35 -62 -68 -125 -33 -63 -116 -221 -183 -350 -68 -129 -188 -361 -267 -515 -587 -1148 -596 -1169 -520 -1284 67 -101 66 -101 567 -101 633 0 586 -30 840 530 66 144 146 314 318 670 43 91 104 217 134 280 31 63 72 149 91 190 32 69 213 438 408 835 43 88 102 205 131 260 75 143 71 227 -13 270 -33 17 -571 27 -839 15z"></path><path class="fill-brand-teal" d="M8697 6159 c-66 -15 -132 -56 -183 -112 -48 -52 -305 -552 -637 -1237 -52 -107 -154 -316 -226 -464 -72 -148 -131 -271 -131 -273 0 -2 -20 -45 -45 -95 -76 -155 -58 -259 55 -319 44 -23 868 -22 943 1 155 48 183 93 519 830 56 122 140 305 181 390 24 52 97 208 162 345 65 138 171 360 236 494 141 289 147 319 83 391 -21 23 -51 44 -72 50 -46 12 -831 12 -885 -1z"></path></g></svg><span class="text-[1.25rem] font-extrabold leading-none tracking-tight sm:text-[1.35rem] text-foreground">SimplyLedgers</span></span><p class="text-sm text-muted-foreground">© <!-- -->2026<!-- --> SimplyLedgers. All rights reserved.</p></div></footer></div><!--/$-->
+  /* Brand panel */
+  .brand { position: relative; overflow: hidden; color: #fff; padding: 40px 48px; display: flex; flex-direction: column;
+           background: radial-gradient(560px 420px at 0% 0%, rgba(3,94,252,.55), transparent 70%),
+                       radial-gradient(520px 460px at 100% 100%, rgba(5,162,150,.42), transparent 70%), var(--ink); }
+  .brand::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size: 36px 36px; mask-image: linear-gradient(180deg, #000, transparent 70%); -webkit-mask-image: linear-gradient(180deg, #000, transparent 70%); }
+  .brand > * { position: relative; }
+  .logo { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-size: 19px; letter-spacing: -.01em; color: #fff; text-decoration: none; }
+  .logo img { height: 30px; }
+  .invite { margin-top: 56px; display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; font-size: 12px; font-weight: 700;
+            letter-spacing: .1em; text-transform: uppercase; color: #bcd3ff; border: 1px solid rgba(188,211,255,.3); border-radius: 99px; padding: 6px 14px; }
+  .invite svg { width: 14px; height: 14px; }
+  .brand h1 { font-size: 40px; line-height: 1.08; letter-spacing: -.03em; font-weight: 800; margin: 20px 0 0; }
+  .brand h1 em { font-style: normal; background: linear-gradient(90deg, #6ea2ff, #3fd6c6); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .brand p.lede { color: #c2cbe0; font-size: 16px; line-height: 1.65; margin: 16px 0 0; max-width: 440px; }
 
+  .summary { margin-top: 36px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 16px; padding: 20px 22px;
+             backdrop-filter: blur(6px); max-width: 440px; }
+  .summary small { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #9fb3d9; font-weight: 700; }
+  .summary .row { display: flex; justify-content: space-between; align-items: baseline; margin-top: 8px; }
+  .summary .name { font-size: 22px; font-weight: 800; }
+  .summary .price { font-size: 22px; font-weight: 800; }
+  .summary .price span { font-size: 13px; color: #9fb3d9; font-weight: 500; }
+  .summary ul { list-style: none; margin: 14px 0 0; padding: 14px 0 0; border-top: 1px solid rgba(255,255,255,.12); display: grid; gap: 8px; }
+  .summary li { font-size: 13.5px; color: #dbe4f5; display: flex; gap: 10px; align-items: center; }
+  .summary li::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #3fd6c6; flex: none; }
 
-<div></div><span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span><div id="mobile-menu" hidden><div data-state="open" class="fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0" data-aria-hidden="true" aria-hidden="true"></div>
-<div role="dialog" id="radix-_R_haq_" data-state="open" class="fixed z-50 bg-background p-6 shadow-lg transition ease-in-out data-[state=closed]:duration-300 data-[state=open]:duration-500 data-[state=open]:animate-in data-[state=closed]:animate-out inset-y-0 right-0 h-full w-3/4 border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm flex flex-col gap-6 pt-14" tabindex="-1" aria-labelledby="radix-_R_haqH1_"><button type="button" class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background cursor-pointer transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x h-4 w-4" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg><span class="sr-only">Close</span></button><h2 id="radix-_R_haqH1_" class="text-lg font-semibold text-foreground sr-only">Menu</h2><nav aria-label="Mobile" class="flex flex-col gap-1"><a class="rounded-lg px-3 py-3 text-base font-semibold text-foreground transition-colors hover:bg-secondary hover:text-primary" href="platform.html">Platform</a><a class="rounded-lg px-3 py-3 text-base font-semibold text-foreground transition-colors hover:bg-secondary hover:text-primary" href="features.html">Features</a><a class="rounded-lg px-3 py-3 text-base font-semibold text-foreground transition-colors hover:bg-secondary hover:text-primary" href="integrations.html">Integrations</a><a class="rounded-lg px-3 py-3 text-base font-semibold text-foreground transition-colors hover:bg-secondary hover:text-primary" href="resources.html">Resources</a><a class="rounded-lg px-3 py-3 text-base font-semibold text-foreground transition-colors hover:bg-secondary hover:text-primary" href="about.html">About</a></nav><div class="mt-auto flex flex-col gap-3"><a class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-primary/70 bg-background text-foreground font-semibold transition-all duration-300 hover:border-primary hover:bg-secondary hover:-translate-y-px px-4 py-2 h-12 rounded-lg" href="pricing.html">Pricing</a><a class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground font-semibold shadow-button transition-all duration-300 hover:bg-primary-deep hover:-translate-y-px [&amp;_svg]:transition-transform hover:[&amp;_svg]:translate-x-0.5 px-4 py-2 h-12 rounded-lg" href="book-demo.html">Book a Demo <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div></div></div><script src="site.js"></script><script>
+  .steps { list-style: none; margin: 36px 0 0; padding: 0; display: grid; gap: 18px; max-width: 440px; counter-reset: s; }
+  .steps li { counter-increment: s; display: grid; grid-template-columns: 32px 1fr; gap: 14px; }
+  .steps li::before { content: counter(s); width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: 13px;
+                      color: #fff; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.06); }
+  .steps b { display: block; font-size: 14.5px; }
+  .steps span { font-size: 13px; color: #a9b4cc; line-height: 1.5; }
+  .brand footer { margin-top: auto; padding-top: 40px; font-size: 12px; color: #8a97b3; }
+
+  /* Form panel */
+  .main { padding: 48px 56px; display: flex; justify-content: center; background: linear-gradient(180deg, #fff, var(--tint)); }
+  .wrap { width: 100%; max-width: 640px; }
+  .main h2 { font-size: 26px; letter-spacing: -.02em; margin: 0; font-weight: 800; }
+  .main .intro { color: var(--muted); margin: 8px 0 0; font-size: 14.5px; line-height: 1.6; }
+  fieldset { border: 0; padding: 0; margin: 32px 0 0; min-width: 0; }
+  legend { display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--blue); padding: 0; margin-bottom: 16px; width: 100%; }
+  legend::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .full { grid-column: 1 / -1; }
+  label.f { display: grid; gap: 7px; font-size: 13.5px; font-weight: 600; color: var(--text); }
+  label.f .opt { color: var(--muted); font-weight: 500; }
+  input, textarea { font: inherit; font-size: 15px; color: var(--text); width: 100%; border: 1px solid var(--field); border-radius: 12px; background: #fff;
+                    padding: 12px 14px; transition: border-color .15s, box-shadow .15s; }
+  textarea { min-height: 96px; resize: vertical; }
+  input::placeholder, textarea::placeholder { color: #94a3b8; }
+  input:focus, textarea:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 4px rgba(3,94,252,.12); }
+  input[aria-invalid="true"] { border-color: var(--err); }
+  .hint { font-size: 12px; color: var(--muted); font-weight: 500; }
+
+  .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .plan { position: relative; cursor: pointer; border: 1.5px solid var(--line); border-radius: 14px; padding: 16px; background: #fff; transition: border-color .15s, box-shadow .15s, transform .15s; }
+  .plan:hover { border-color: #a9c4fd; transform: translateY(-1px); }
+  .plan input { position: absolute; opacity: 0; pointer-events: none; }
+  .plan .pn { font-weight: 800; font-size: 15px; display: flex; justify-content: space-between; align-items: center; }
+  .plan .pn i { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid var(--field); display: grid; place-items: center; }
+  .plan .pp { font-size: 20px; font-weight: 800; margin-top: 8px; letter-spacing: -.01em; }
+  .plan .pp span { font-size: 12px; color: var(--muted); font-weight: 500; }
+  .plan .pd { font-size: 12.5px; color: var(--body); margin-top: 6px; line-height: 1.5; }
+  .plan .tag { position: absolute; top: -10px; right: 12px; font-size: 10.5px; font-weight: 700; color: #fff; background: var(--blue); border-radius: 99px; padding: 2px 9px; }
+  .plan:has(input:checked) { border-color: var(--blue); box-shadow: 0 0 0 4px rgba(3,94,252,.1); background: #fbfdff; }
+  .plan:has(input:checked) .pn i { border-color: var(--blue); background: var(--blue); box-shadow: inset 0 0 0 3px #fff; }
+  .plan:has(input:focus-visible) { box-shadow: 0 0 0 4px rgba(3,94,252,.25); }
+
+  .submit { margin-top: 32px; display: grid; gap: 12px; }
+  button.go { font: inherit; font-size: 16px; font-weight: 700; color: #fff; border: 0; border-radius: 12px; padding: 15px 20px; cursor: pointer;
+              background: linear-gradient(90deg, var(--blue), #0a7ae0); box-shadow: 0 10px 24px -10px rgba(3,94,252,.6); display: inline-flex; justify-content: center; align-items: center; gap: 10px; transition: transform .15s, box-shadow .15s; }
+  button.go:hover { transform: translateY(-1px); box-shadow: 0 14px 28px -10px rgba(3,94,252,.7); }
+  button.go:disabled { opacity: .65; cursor: default; transform: none; }
+  .fine { text-align: center; font-size: 12.5px; color: var(--muted); margin: 0; }
+  .fine svg { width: 13px; height: 13px; vertical-align: -2px; margin-right: 4px; }
+  .error { color: var(--err); font-size: 13.5px; font-weight: 600; text-align: center; margin: 0; }
+  .hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+
+  .done { text-align: center; padding: 60px 0; }
+  .done .ok { width: 72px; height: 72px; border-radius: 50%; margin: 0 auto; display: grid; place-items: center; background: #e6f6f4; color: var(--teal); }
+  .done .ok svg { width: 34px; height: 34px; }
+  .done h2 { margin-top: 24px; }
+  .done p { color: var(--body); line-height: 1.7; max-width: 460px; margin: 12px auto 0; }
+
+  @media (max-width: 980px) {
+    .shell { grid-template-columns: 1fr; }
+    .brand { padding: 28px 20px 32px; }
+    .invite { margin-top: 28px; }
+    .brand h1 { font-size: 30px; }
+    .steps, .brand footer { display: none; }
+    .main { padding: 32px 16px 48px; }
+  }
+  @media (max-width: 600px) { .grid, .plans { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="shell">
+  <aside class="brand">
+    <a class="logo" href="https://simplyledgers.com"><img src="/favicon.svg" alt="">SimplyLedgers</a>
+    <span class="invite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Private onboarding</span>
+    <h1>Set up your firm on <em>SimplyLedgers</em></h1>
+    <p class="lede">You've been invited to create a workspace for your practice. Tell us about your firm and pick a plan. We'll handle the rest.</p>
+
+    <div class="summary" aria-live="polite">
+      <small>Your plan</small>
+      <div class="row"><span class="name" id="s-name">Pro</span><span class="price" id="s-price">₹4,999<span> /month</span></span></div>
+      <ul id="s-list"></ul>
+    </div>
+
+    <ol class="steps">
+      <li><div><b>Submit your details</b><span>Two minutes. No payment now.</span></div></li>
+      <li><div><b>We call to confirm</b><span>Answer questions, finalise the plan and send an invoice.</span></div></li>
+      <li><div><b>Pay directly</b><span>Bank transfer or UPI. No card needed.</span></div></li>
+      <li><div><b>Your workspace goes live</b><span>Your sign-in arrives by email. Connect Tally and start.</span></div></li>
+    </ol>
+    <footer>Hosted in India · AWS Mumbai</footer>
+  </aside>
+
+  <main class="main">
+    <div class="wrap" id="wrap">
+      <h2>Create your workspace</h2>
+      <p class="intro">This link was shared with you by the SimplyLedgers team. Fields marked optional can be left blank.</p>
+
+      <form id="f" novalidate>
+        <fieldset>
+          <legend>Your firm</legend>
+          <div class="grid">
+            <label class="f full">Firm name<input name="firm_name" required minlength="2" maxlength="200" autocomplete="organization" placeholder="Rao &amp; Associates"></label>
+            <label class="f">City<input name="city" required minlength="2" maxlength="80" autocomplete="address-level2" placeholder="Hyderabad"></label>
+            <label class="f"><span>Firm GSTIN <span class="opt">(optional)</span></span><input name="gstin" maxlength="15" pattern="[0-9]{2}[A-Za-z0-9]{13}" placeholder="36AAKCS4521M1Z8" style="text-transform:uppercase"></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Partner contact</legend>
+          <div class="grid">
+            <label class="f">Your name<input name="contact_name" required minlength="2" maxlength="120" autocomplete="name" placeholder="Full name"></label>
+            <label class="f">Phone<input name="phone" type="tel" required pattern="\+?[0-9 ]{10,15}" autocomplete="tel" placeholder="+91 98480 12345"></label>
+            <label class="f full">Work email<input name="email" type="email" required maxlength="254" autocomplete="email" placeholder="name@yourfirm.com"><span class="hint">Your sign-in is created on this email.</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Plan</legend>
+          <div class="plans" id="plans"></div>
+          <p class="hint" style="margin:10px 0 0">Prices exclude 18% GST. You can still change plan when we call.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your practice</legend>
+          <div class="grid">
+            <label class="f">Team members who will sign in<input name="team_size" type="number" required min="1" max="500" placeholder="5"></label>
+            <label class="f">Client companies you manage<input name="client_count" type="number" required min="1" max="100000" placeholder="30"></label>
+            <label class="f full"><span>Anything we should know? <span class="opt">(optional)</span></span><textarea name="message" maxlength="2000" placeholder="Monthly document volume, Tally version, best time to call…"></textarea></label>
+          </div>
+        </fieldset>
+
+        <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+
+        <div class="submit">
+          <button class="go" type="submit">Request my workspace
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <p class="fine"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Your details go only to the SimplyLedgers team. No payment is taken here.</p>
+        </div>
+      </form>
+    </div>
+  </main>
+</div>
+
+<script>
 (function () {
-  var form = document.querySelector('form[data-signup-form]');
-  if (!form) return;
-  var plan = new URLSearchParams(location.search).get('plan');
-  if (plan && form.plan.querySelector('option[value="' + plan + '"]')) form.plan.value = plan;
-  form.addEventListener('submit', function (e) {
+  var API = "https://api.simplyledgers.com/api/v1/public/signup-requests";
+  var PLANS = {
+    Starter: { price: "1,499", desc: "500 documents a month", feats: ["500 documents a month", "Up to 10 client companies", "3 users"] },
+    Pro: { price: "4,999", desc: "2,500 documents a month", feats: ["2,500 documents a month", "Up to 40 client companies", "10 users"], tag: "Popular" },
+    Max: { price: "14,999", desc: "7,500 documents, own server", feats: ["7,500 documents a month", "Unlimited client companies", "25 users", "Dedicated server"] }
+  };
+  var form = document.getElementById("f");
+  var clean = function (s) { return String(s).replace(/[<>&"]/g, ""); };
+
+  document.getElementById("plans").innerHTML = Object.keys(PLANS).map(function (k) {
+    var p = PLANS[k];
+    return '<label class="plan">' + (p.tag ? '<span class="tag">' + p.tag + "</span>" : "") +
+      '<input type="radio" name="plan" value="' + k + '" required>' +
+      '<div class="pn">' + k + "<i></i></div>" +
+      '<div class="pp">₹' + p.price + "<span> /mo</span></div>" +
+      '<div class="pd">' + p.desc + "</div></label>";
+  }).join("");
+
+  function showPlan(k) {
+    var p = PLANS[k];
+    document.getElementById("s-name").textContent = k;
+    document.getElementById("s-price").innerHTML = "₹" + p.price + "<span> /month</span>";
+    document.getElementById("s-list").innerHTML = p.feats.map(function (f) { return "<li>" + f + "</li>"; }).join("");
+  }
+  var start = new URLSearchParams(location.search).get("plan");
+  if (!PLANS[start]) start = "Pro";
+  form.querySelector('input[value="' + start + '"]').checked = true;
+  showPlan(start);
+  form.addEventListener("change", function (e) { if (e.target.name === "plan") showPlan(e.target.value); });
+  form.addEventListener("input", function (e) { e.target.removeAttribute("aria-invalid"); });
+
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
-    if (!form.reportValidity()) return;
-    var btn = form.querySelector('button[type="submit"]');
-    var old = form.querySelector('[data-form-error]');
+    var bad = Array.prototype.filter.call(form.elements, function (el) { return el.willValidate && !el.checkValidity(); });
+    bad.forEach(function (el) { el.setAttribute("aria-invalid", "true"); });
+    if (bad.length) { bad[0].reportValidity(); bad[0].focus(); return; }
+    var btn = form.querySelector("button.go");
+    var old = form.querySelector(".error");
     if (old) old.remove();
     var d = new FormData(form);
     var body = {
-      firm_name: d.get('firm_name'), contact_name: d.get('contact_name'), email: d.get('email'),
-      phone: d.get('phone'), city: d.get('city'), gstin: d.get('gstin') || null, plan: d.get('plan'),
-      team_size: Number(d.get('team_size')), client_count: Number(d.get('client_count')),
-      message: d.get('message') || null, website: d.get('website') || null
+      firm_name: d.get("firm_name"), contact_name: d.get("contact_name"), email: d.get("email"),
+      phone: d.get("phone"), city: d.get("city"), gstin: d.get("gstin") || null, plan: d.get("plan"),
+      team_size: Number(d.get("team_size")), client_count: Number(d.get("client_count")),
+      message: d.get("message") || null, website: d.get("website") || null
     };
     btn.disabled = true;
     // text/plain keeps this a simple CORS request: the API answers simplyledgers.com without a preflight.
-    fetch('https://api.simplyledgers.com/api/v1/public/signup-requests', { method: 'POST', credentials: 'omit', headers: { 'Content-Type': 'text/plain' }, body: JSON.stringify(body) })
-      .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.detail || 'failed'); }); })
+    fetch(API, { method: "POST", credentials: "omit", headers: { "Content-Type": "text/plain" }, body: JSON.stringify(body) })
+      .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.detail || "failed"); }); })
       .then(function () {
         // Heads-up email to the team; the request is already saved, so a failure here is ignored.
         var n = new FormData();
-        n.append('access_key', '6f078c88-5a00-4532-8b9d-7a2fa62a336e');
-        n.append('subject', 'New signup request: ' + body.firm_name + ' (' + body.plan + ')');
-        n.append('from_name', 'SimplyLedgers website');
-        n.append('replyto', body.email);
-        ['firm_name', 'contact_name', 'email', 'phone', 'city', 'plan', 'team_size', 'client_count'].forEach(function (k) { n.append(k, body[k]); });
-        fetch('https://api.web3forms.com/submit', { method: 'POST', body: n, headers: { Accept: 'application/json' } }).catch(function () {});
-        form.innerHTML = '<div class="sm:col-span-2"><p class="text-lg font-semibold text-foreground">Thanks, your request is in.</p>' +
-          '<p class="mt-2 text-sm leading-relaxed text-muted-foreground">We will call you on the number you gave to confirm your plan and send the invoice. ' +
-          'Your login arrives by email once payment is received.</p></div>';
+        n.append("access_key", "6f078c88-5a00-4532-8b9d-7a2fa62a336e");
+        n.append("subject", "New signup request: " + body.firm_name + " (" + body.plan + ")");
+        n.append("from_name", "SimplyLedgers signup");
+        n.append("replyto", body.email);
+        ["firm_name", "contact_name", "email", "phone", "city", "plan", "team_size", "client_count"].forEach(function (k) { n.append(k, body[k]); });
+        fetch("https://api.web3forms.com/submit", { method: "POST", body: n, headers: { Accept: "application/json" } }).catch(function () {});
+        document.getElementById("wrap").innerHTML =
+          '<div class="done"><div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>' +
+          "<h2>Thank you, " + clean(String(body.contact_name).split(" ")[0]) + "</h2>" +
+          "<p>We've received the request for <b>" + clean(body.firm_name) + "</b> on the <b>" + body.plan + "</b> plan. " +
+          "Our team will call you shortly to confirm and send the invoice. Your sign-in arrives by email once payment is received.</p></div>";
+        window.scrollTo({ top: 0, behavior: "smooth" });
       })
       .catch(function (err) {
         btn.disabled = false;
-        var p = document.createElement('p');
-        p.setAttribute('data-form-error', '');
-        p.setAttribute('role', 'alert');
-        p.className = 'text-sm font-semibold text-destructive sm:col-span-2';
-        p.textContent = /check|many/i.test(err.message) ? err.message : 'Sorry, your request could not be sent. Please try again or book a demo instead.';
-        form.appendChild(p);
+        var p = document.createElement("p");
+        p.className = "error";
+        p.setAttribute("role", "alert");
+        p.textContent = /check|many/i.test(err.message) ? err.message : "Sorry, we couldn't send your request. Please try again in a moment.";
+        form.querySelector(".submit").prepend(p);
       });
   });
 })();
 </script>
-</body></html>
+</body>
+</html>

@@ -26,7 +26,7 @@
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
 
   // Demo form: emailed to the team via Web3Forms (free tier, 250/month). The access key is public by design.
-  var form = document.querySelector('form:not([data-signup-form])');
+  var form = document.querySelector('form');
   if (form) form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (!form.reportValidity()) return;
